@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+}
+
+.availability {
+    color: green;
+}
+
+.div {
+    width: 200px;
+    height: 350px;
+    margin: 20px;
+}
+
+.Ellipse15 {
+    position: absolute;
+    top: -40px;
+    right: -70px;
+}

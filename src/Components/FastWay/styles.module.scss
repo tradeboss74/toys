@@ -1,0 +1,25 @@
+.container {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    justify-content: space-around;
+
+    & .Rectangle1 {
+        width: 500px;
+        height: 500px;
+    }
+
+    & .Rectangle2 {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+.HalfEllipse16 {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    top: 20px;
+    right: -10px;
+}

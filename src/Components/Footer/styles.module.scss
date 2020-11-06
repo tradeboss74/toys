@@ -1,0 +1,89 @@
+.top {
+    width: 100vw;
+    height: 200px;
+    background-color: rgb(255, 237, 237);
+    padding: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    grid-template-rows: 50px 50px;
+    place-items: center;
+
+    list-style-type: none;
+}
+.title {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.bottom {
+    width: 100vw;
+    height: 200px;
+    background-color: rgb(16, 23, 67);
+    padding: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    place-items: center;
+    column-gap: 20px;
+    list-style-type: none;
+    color: white;
+}
+.shopName {
+    display: grid;
+    place-items: start;
+
+    & .name {
+        place-self: end start;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+.first {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+.second {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+.third {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+.fourth {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+.other {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+.button {
+    width: max-content;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid white;
+    padding: 7px;
+    background-color: rgb(16, 23, 67);
+}
+
+.littleWords {
+    font-size: 16;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-right: 30px;
+}
+
+.span {
+    color: blue;
+    font-size: 44px;
+    font-weight: bold;
+}
