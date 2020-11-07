@@ -19,14 +19,14 @@ export const Header = () => {
                 <p>Порадуйте свою дитину</p>
                 <button className={styles.button}>Дивитися каталог</button>
             </div>
-            <img src={Ellipse10} className={styles.Ellipse10} alt='еліпс' />
+            <img src={Ellipse10} className={styles.Ellipse10} alt=' ' />
 
-            <img src={Ellipse11} className={styles.Ellipse11} alt='еліпс' />
+            <img src={Ellipse11} className={styles.Ellipse11} alt=' ' />
             <img src={Monsters} className={styles.MonstersImg} alt='Іграшкові Монстри' />
-            <img src={Ellipse13} className={styles.Ellipse13} alt='еліпс' />
+            <img src={Ellipse13} className={styles.Ellipse13} alt=' ' />
 
-            <img src={Ellipse13} className={styles.Ellipse13Left} alt='еліпс' />
-            <img src={HalfEllipse10} className={styles.Ellipse10Left} alt='еліпс' />
+            <img src={Ellipse13} className={styles.Ellipse13Left} alt=' ' />
+            <img src={HalfEllipse10} className={styles.Ellipse10Left} alt=' ' />
         </div>
     );
 };
