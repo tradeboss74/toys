@@ -1,4 +1,3 @@
-import React from 'react';
 import rabbit from '../../images/rabbit.png';
 import robot from '../../images/robot.png';
 import bear2 from '../../images/bear2.png';

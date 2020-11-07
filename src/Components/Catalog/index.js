@@ -1,15 +1,8 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import rabbit from '../../images/rabbit.png';
-import robot from '../../images/robot.png';
-import bear2 from '../../images/bear2.png';
-import blueRabbit from '../../images/blueRabbit.png';
-import softToy from '../../images/softToy.png';
-import blueDog from '../../images/blueDog.png';
-import mouse from '../../images/mouse.png';
-import blueEars from '../../images/blueEars.png';
-import Ellipse15 from '../../images/Ellipse15.png';
 import { array } from '../Import';
+import ellipse from '../../images/Ellipse15.png';
+import arrow from '../../images/VectorLeft.png';
 
 export const Catalog = () => {
     return (
@@ -22,8 +15,10 @@ export const Catalog = () => {
                         <h3>{Name}</h3>
                         <p className={styles.availability}>{inStock}</p>
                         <p>{price}</p>
+                        <img src={arrow} className={styles.arrow} alt='' />
                     </div>
                 ))}
+                <img src={ellipse} className={styles.ellipse} alt='' />
             </div>
         </div>
     );
