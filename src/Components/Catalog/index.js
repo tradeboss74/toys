@@ -10,15 +10,15 @@ export const Catalog = () => {
             <h1 className={styles.h1}>Каталог товарів</h1>
             <div className={styles.container}>
                 {array.map(({ Name, inStock, price, img, alt, link }) => (
-                    <a
-                        className={styles.a}
-                        href={link}
-                        target='_blank'
-                        rel='noopener noreferrer'
+                    <ItemCard
+                        Name={Name}
+                        img={img}
+                        alt={alt}
+                        inStock={inStock}
+                        price={price}
+                        link={link}
                         key={Math.random()}
-                    >
-                        <ItemCard Name={Name} img={img} alt={alt} inStock={inStock} price={price} />
-                    </a>
+                    />
                 ))}
                 <img src={ellipse} className={styles.ellipse} alt='' />
             </div>

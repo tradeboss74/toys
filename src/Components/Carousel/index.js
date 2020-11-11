@@ -12,9 +12,15 @@ export const Carousel = () => {
             <HorisontalMenu />
             <ElasticCarousel itemsToScroll={1} itemsToShow={4} className={styles.carousel}>
                 {array.map(({ Name, inStock, price, img, alt, link }) => (
-                    <a href={link} target='_blank' rel='noopener noreferrer' key={Math.random()}>
-                        <ItemCard Name={Name} img={img} alt={alt} inStock={inStock} price={price} />
-                    </a>
+                    <ItemCard
+                        Name={Name}
+                        img={img}
+                        alt={alt}
+                        inStock={inStock}
+                        price={price}
+                        link={link}
+                        key={Math.random()}
+                    />
                 ))}
             </ElasticCarousel>
         </div>

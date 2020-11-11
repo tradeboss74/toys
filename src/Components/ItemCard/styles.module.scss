@@ -6,7 +6,7 @@
 .availability {
     color: green;
 }
-.div {
+.a {
     display: grid;
     width: 250px;
     height: 350px;
@@ -17,6 +17,7 @@
     text-decoration: none;
     color: black;
     background: rgb(251, 241, 241);
+    z-index: 2;
     & .arrow {
         position: relative;
         left: 85%;
