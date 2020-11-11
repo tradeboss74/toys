@@ -11,7 +11,7 @@ export const Catalog = () => {
             <div className={styles.container}>
                 {array.map(({ Name, inStock, price, img, alt, link }) => (
                     <a
-                        className={styles.div}
+                        className={styles.a}
                         href={link}
                         target='_blank'
                         rel='noopener noreferrer'
