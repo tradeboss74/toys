@@ -4,22 +4,41 @@
     grid-auto-flow: column;
     place-items: center;
     justify-content: space-around;
+    z-index: 2;
+
+    @media only screen and (max-width: 600px) {
+        // grid-auto-flow: row;
+        overflow-x: scroll;
+    }
 
     & .Rectangle1 {
         width: 500px;
         height: 500px;
+        z-index: 2;
+
+        @media only screen and (max-width: 450px) {
+            width: 400px;
+            height: 400px;
+        }
     }
 
     & .Rectangle2 {
         width: 500px;
         height: 500px;
-    }
-}
+        z-index: 2;
 
-.HalfEllipse16 {
-    position: absolute;
-    width: 100px;
-    height: 200px;
-    top: 20px;
-    right: -10px;
+        @media only screen and (max-width: 450px) {
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+    & .HalfEllipse16 {
+        position: absolute;
+        width: 100px;
+        height: 200px;
+        top: 20px;
+        right: -10px;
+        z-index: 1;
+    }
 }

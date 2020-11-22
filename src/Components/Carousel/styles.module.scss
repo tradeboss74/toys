@@ -1,19 +1,30 @@
 .container {
     display: grid;
     grid-auto-flow: column;
-    width: 100wv;
-    height: 500px;
+    grid-template-columns: max-content 1fr;
+    width: 100vw;
     padding-top: 30px;
     background-color: rgb(248, 225, 241);
-    & .carousel {
-        grid-row-start: 2;
-        grid-row-end: 3;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        padding: 20px;
-    }
-}
 
-.h2 {
-    padding-left: 80px;
+    @media only screen and (max-width: 800px) {
+        grid-auto-flow: row;
+        grid-template-columns: max-content;
+    }
+
+    & .carousel {
+        grid-column: 1 / 3;
+        grid-row: 2;
+        padding: 20px;
+        width: 100vw;
+
+        @media only screen and (max-width: 800px) {
+            grid-column: auto;
+            grid-row: auto;
+        }
+    }
+
+    & .h2 {
+        padding-left: 80px;
+        place-self: center;
+    }
 }

@@ -2,15 +2,19 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     position: relative;
-}
 
-.ellipse {
-    position: absolute;
-    top: -60px;
-    right: -170px;
-    z-index: 1;
-}
+    @media only screen and (max-width: 450) {
+        overflow-x: scroll;
+    }
 
-.h1 {
-    padding: 20px;
+    & .ellipse {
+        position: absolute;
+        top: -60px;
+        right: -170px;
+        z-index: 1;
+    }
+
+    & .h1 {
+        padding: 20px;
+    }
 }

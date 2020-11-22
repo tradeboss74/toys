@@ -1,38 +1,96 @@
-.App {
-    text-align: center;
-}
+/* .header {
+    width: 100vw;
+    height: 100px;
+    padding-left: 80px;
+    background-color: white;
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    place-items: center;
+    column-gap: 20px;
+    list-style-type: none;
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
+    & .logo {
+        width: 50px;
+        height: 50px;
+
+        grid-auto-columns: 65px;
+    }
+
+    & .shopName {
+        display: grid;
+        place-items: start;
+
+        & .name {
+            place-self: end start;
+            font-weight: bold;
+            color: rgb(55, 76, 203);
+        }
+    }
+
+    & .phone {
+        font-weight: bold;
+    }
+
+    & .button {
+        width: max-content;
+        border-radius: 20px;
+        color: orange;
+        border: 1px solid orange;
+        padding: 7px;
+    }
+
+    & .price {
+        font-weight: bold;
+    }
+
+    & .point {
+        width: 5px;
+        height: 5px;
     }
 }
 
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+.footer {
+    width: 100vw;
+    height: 200px;
+    background-color: rgb(16, 23, 67);
+    padding: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    place-items: center;
+    column-gap: 20px;
+    list-style-type: none;
     color: white;
-}
 
-.App-link {
-    color: #61dafb;
-}
+    & .shopName {
+        display: grid;
+        place-items: start;
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
+        & .name {
+            place-self: end start;
+            font-weight: bold;
+            color: white;
+        }
     }
-    to {
-        transform: rotate(360deg);
+
+    & .section {
+        list-style-type: none;
+        text-decoration: none;
+        color: white;
+
+        & .button {
+            width: max-content;
+            border-radius: 20px;
+            color: white;
+            border: 1px solid white;
+            padding: 7px;
+            background-color: rgb(16, 23, 67);
+        }
+
+        & .menu {
+            color: white;
+        }
     }
-}
+} */

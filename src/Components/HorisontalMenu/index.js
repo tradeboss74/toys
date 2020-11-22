@@ -1,5 +1,10 @@
 import React from 'react';
 import styles from './styles.module.scss';
+import Bear from '../../images/Bear.png';
+import Bear3 from '../../images/Bear3.png';
+import Cart from '../../images/Cart.png';
+import Button from '../../images/Button.png';
+import burger from '../../images/burger.png';
 
 const ToyRange = [
     {
@@ -29,13 +34,26 @@ const ToyRange = [
     },
 ];
 
-export const HorisontalMenu = ({ className }) => {
+export const HorisontalMenu = ({ type = 'header' }) => {
     return (
-        <div>
+        <div
+            className={`${styles.header} ${type === 'carousel' && styles.carouselStyle} ${
+                type === 'footer' && styles.footer
+            }`}
+        >
+            {type === 'header' ? <img src={Bear} className={styles.logo} alt='логотип' /> : null}
+            {type === 'footer' && <img src={Bear3} className={styles.logo3} alt='логотип' />}
+
+            <div className={`${styles.shopName} ${type === 'carousel' && styles.hide}`}>
+                <p className={`${styles.name} ${type === 'footer' && styles.footer}`}>TOY SHOP</p>
+                <p>Магазин Дитячих Іграшок</p>
+            </div>
             {ToyRange.map(({ Link, Dir }) => (
                 <a
                     href={Link}
-                    className={`${styles.section} ${className}`}
+                    className={`${styles.menu} ${type === 'footer' && styles.footer} ${
+                        type === 'header' && styles.headerHide
+                    }`}
                     target='_blank'
                     rel='noopener noreferrer'
                     key={Math.random()}
@@ -43,6 +61,45 @@ export const HorisontalMenu = ({ className }) => {
                     {Dir}
                 </a>
             ))}
+            <p className={`${styles.phone} ${type === 'carousel' && styles.hide}`}>
+                +38(063)104-22-44
+            </p>
+            <button
+                className={`${styles.button} ${type === 'carousel' && styles.hide} ${
+                    type === 'footer' && styles.footer
+                } ${type === 'header' && styles.headerHide}`}
+            >
+                Замовити дзвінок
+            </button>
+
+            <img
+                src={Cart}
+                className={`${styles.img} ${type === 'carousel' && styles.hide} ${
+                    type === 'footer' && styles.hide
+                }`}
+                alt='Кошик'
+            />
+            <p
+                className={`${styles.price} ${type === 'carousel' && styles.hide} ${
+                    type === 'footer' && styles.hide
+                }`}
+            >
+                1227 грн.
+            </p>
+
+            <img
+                src={Button}
+                className={`${styles.point} ${type === 'carousel' && styles.hide} ${
+                    type === 'footer' && styles.hide
+                }`}
+                alt='склад кошику'
+            />
+            <img
+                src={burger}
+                className={`${type === 'carousel' && styles.hide} ${
+                    type === 'footer' && styles.hide
+                } ${type === 'header' && styles.burger}`}
+            />
         </div>
     );
 };

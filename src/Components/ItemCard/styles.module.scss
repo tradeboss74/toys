@@ -1,11 +1,3 @@
-.img {
-    width: 200px;
-    height: 200px;
-}
-
-.availability {
-    color: green;
-}
 .a {
     display: grid;
     width: 250px;
@@ -22,5 +14,13 @@
         position: relative;
         left: 85%;
         bottom: 24%;
+    }
+    & .img {
+        width: 200px;
+        height: 200px;
+    }
+
+    & .availability {
+        color: green;
     }
 }

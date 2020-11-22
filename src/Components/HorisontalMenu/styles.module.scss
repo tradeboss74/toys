@@ -1,10 +1,147 @@
-.section {
-    list-style-type: none;
-    text-decoration: none;
-    color: black;
-    padding-right: 20px;
-}
+.header {
+    width: 100vw;
+    // padding-left: 80px;
+    background-color: white;
+    padding: 20px 20px 20px 80px;
 
-.menu {
-    color: white;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    place-items: center;
+    column-gap: 20px;
+    // gap: 10px 20px;
+    list-style-type: none;
+
+    @media only screen and (max-width: 600px) {
+        grid-auto-flow: row;
+    }
+
+    & .burger {
+        place-self: end;
+
+        white-space: nowrap;
+
+        @media only screen and (min-width: 800px) {
+            display: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            grid-column-start: 3;
+            grid-row-start: 1;
+        }
+    }
+
+    & .menu {
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+
+        &.headerHide {
+            @media only screen and (max-width: 800px) {
+                display: none;
+            }
+        }
+
+        &.footer {
+            color: white;
+
+            @media only screen and (max-width: 450px) {
+                display: block; // не зміг відобразити після display: none; в .menu
+            }
+        }
+    }
+
+    & .logo {
+        width: 50px;
+        height: 50px;
+
+        place-self: start;
+    }
+
+    & .logo3 {
+        width: 50px;
+        height: 50px;
+
+        grid-auto-columns: 65px;
+    }
+
+    & .shopName {
+        display: grid;
+        place-items: start;
+
+        & .name {
+            place-self: end start;
+            font-weight: bold;
+            color: rgb(55, 76, 203);
+
+            &.footer {
+                color: white;
+            }
+        }
+    }
+
+    & .phone {
+        font-weight: bold;
+
+        @media only screen and (max-width: 600px) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            place-self: start;
+        }
+    }
+
+    & .button {
+        width: max-content;
+        border-radius: 20px;
+        color: orange;
+        border: 1px solid orange;
+        padding: 7px;
+
+        &.headerHide {
+            @media only screen and (max-width: 800px) {
+                display: none;
+            }
+        }
+
+        &.footer {
+            background-color: rgb(16, 23, 67);
+            color: white;
+            border: 1px solid white;
+        }
+    }
+
+    & .img {
+        @media only screen and (max-width: 600px) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            place-self: end;
+        }
+    }
+
+    & .price {
+        font-weight: bold;
+    }
+
+    & .point {
+        width: 5px;
+        height: 5px;
+    }
+
+    & .hide {
+        display: none;
+    }
+
+    &.carouselStyle {
+        background: transparent;
+    }
+
+    &.footer {
+        background-color: rgb(16, 23, 67);
+        color: white;
+
+        @media only screen and (max-width: 450px) {
+        }
+    }
 }

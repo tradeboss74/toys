@@ -73,19 +73,3 @@ export const array = [
         link: 'https://www.youtube.com/watch?v=Q1wtUuLVLU4&ab_channel=MamaRika',
     },
 ];
-
-// export const ItemCard = () => {
-//     return (
-//         <div>
-//             {array.map(({ Name, inStock, price, img, alt }) => (
-//                 <div className={styles.div}>
-//                     <img className={styles.img} src={img} alt={alt} />
-//                     <h3>{Name}</h3>
-//                     <p className={styles.availability}>{inStock}</p>
-//                     <p>{price}</p>
-//                     <img src={arrow} className={styles.arrow} alt='' />
-//                 </div>
-//             ))}
-//         </div>
-//     );
-// };
