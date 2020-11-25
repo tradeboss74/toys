@@ -1,36 +1,36 @@
 .top {
     width: 100vw;
-    height: 200px;
+    // height: 200px;
     background-color: rgb(255, 237, 237);
     padding: 30px;
     display: grid;
-    grid-auto-flow: column;
+    // grid-auto-flow: column;
     grid-auto-columns: max-content;
-    grid-template-rows: 50px 50px;
+    // grid-template-rows: 50px 50px;
     place-items: center;
-
-    @media only screen and (max-width: 450px) {
-        grid-auto-flow: row;
-        grid-template-columns: 1fr;
-    }
 
     @media only screen and (max-width: 600px) {
         grid-auto-flow: row;
-        grid-template-columns: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 450px) {
+        display: block;
     }
 
     list-style-type: none;
 
-    & .title {
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
+    // & .title {
+    //     // grid-row-start: 1;
+    //     // grid-row-end: 2;
+    // }
 
     & .littleWords {
         font-size: 16;
         grid-row-start: 2;
         grid-row-end: 3;
         padding-right: 30px;
+        display: flex;
+        align-items: center;
     }
 
     & .span {

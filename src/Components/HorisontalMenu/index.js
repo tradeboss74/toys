@@ -39,12 +39,16 @@ export const HorisontalMenu = ({ type = 'header' }) => {
         <div
             className={`${styles.header} ${type === 'carousel' && styles.carouselStyle} ${
                 type === 'footer' && styles.footer
-            }`}
+            } ${type === 'header' && styles.headerHide}`}
         >
             {type === 'header' ? <img src={Bear} className={styles.logo} alt='логотип' /> : null}
             {type === 'footer' && <img src={Bear3} className={styles.logo3} alt='логотип' />}
 
-            <div className={`${styles.shopName} ${type === 'carousel' && styles.hide}`}>
+            <div
+                className={`${styles.shopName} ${type === 'carousel' && styles.hide} ${
+                    type === 'footer' && styles.footer
+                } ${type === 'header' && styles.headerHide}`}
+            >
                 <p className={`${styles.name} ${type === 'footer' && styles.footer}`}>TOY SHOP</p>
                 <p>Магазин Дитячих Іграшок</p>
             </div>
@@ -53,7 +57,7 @@ export const HorisontalMenu = ({ type = 'header' }) => {
                     href={Link}
                     className={`${styles.menu} ${type === 'footer' && styles.footer} ${
                         type === 'header' && styles.headerHide
-                    }`}
+                    } ${type === 'carousel' && styles.carouselStyle}`}
                     target='_blank'
                     rel='noopener noreferrer'
                     key={Math.random()}
@@ -61,7 +65,11 @@ export const HorisontalMenu = ({ type = 'header' }) => {
                     {Dir}
                 </a>
             ))}
-            <p className={`${styles.phone} ${type === 'carousel' && styles.hide}`}>
+            <p
+                className={`${styles.phone} ${type === 'carousel' && styles.hide} ${
+                    type === 'header' && styles.headerHide
+                } ${type === 'footer' && styles.footer}`}
+            >
                 +38(063)104-22-44
             </p>
             <button
@@ -76,13 +84,13 @@ export const HorisontalMenu = ({ type = 'header' }) => {
                 src={Cart}
                 className={`${styles.img} ${type === 'carousel' && styles.hide} ${
                     type === 'footer' && styles.hide
-                }`}
+                } ${type === 'header' && styles.headerHide}`}
                 alt='Кошик'
             />
             <p
                 className={`${styles.price} ${type === 'carousel' && styles.hide} ${
                     type === 'footer' && styles.hide
-                }`}
+                } ${type === 'header' && styles.headerHide}`}
             >
                 1227 грн.
             </p>
@@ -91,7 +99,7 @@ export const HorisontalMenu = ({ type = 'header' }) => {
                 src={Button}
                 className={`${styles.point} ${type === 'carousel' && styles.hide} ${
                     type === 'footer' && styles.hide
-                }`}
+                } ${type === 'header' && styles.headerHide}`}
                 alt='склад кошику'
             />
             <img
@@ -99,6 +107,7 @@ export const HorisontalMenu = ({ type = 'header' }) => {
                 className={`${type === 'carousel' && styles.hide} ${
                     type === 'footer' && styles.hide
                 } ${type === 'header' && styles.burger}`}
+                alt='menu'
             />
         </div>
     );

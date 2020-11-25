@@ -1,33 +1,44 @@
 .header {
     width: 100vw;
-    // padding-left: 80px;
     background-color: white;
-    padding: 20px 20px 20px 80px;
+    padding: 20px 20px 20px 40px;
+    position: relative;
 
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     place-items: center;
     column-gap: 20px;
-    // gap: 10px 20px;
     list-style-type: none;
 
-    @media only screen and (max-width: 600px) {
-        grid-auto-flow: row;
+    &.headerHide {
+        @media only screen and (max-width: 600px) {
+            padding: 20px;
+        }
+        @media only screen and (max-width: 450px) {
+            padding: 10px;
+            grid-auto-flow: row;
+            grid-gap: 10px;
+        }
+    }
+
+    &.footer {
+        @media only screen and (max-width: 600px) {
+            padding: 10px;
+        }
+        @media only screen and (max-width: 450px) {
+            grid-gap: 10px;
+        }
     }
 
     & .burger {
-        place-self: end;
-
-        white-space: nowrap;
-
         @media only screen and (min-width: 800px) {
             display: none;
         }
 
-        @media only screen and (max-width: 600px) {
-            grid-column-start: 3;
+        @media only screen and (max-width: 450px) {
             grid-row-start: 1;
+            grid-column-start: 2;
         }
     }
 
@@ -45,8 +56,13 @@
         &.footer {
             color: white;
 
+            @media only screen and (max-width: 600px) {
+                grid-auto-flow: row;
+                grid-row-start: 2;
+            }
+
             @media only screen and (max-width: 450px) {
-                display: block; // не зміг відобразити після display: none; в .menu
+                grid-row-start: 2;
             }
         }
     }
@@ -54,20 +70,47 @@
     & .logo {
         width: 50px;
         height: 50px;
-
         place-self: start;
+        grid-column-start: 1;
+        grid-row-start: 1;
     }
 
     & .logo3 {
         width: 50px;
         height: 50px;
+        place-self: start;
+        // grid-auto-columns: 65px;
 
-        grid-auto-columns: 65px;
+        &.footer {
+            @media only screen and (max-width: 450px) {
+                padding: 10px;
+            }
+        }
     }
 
     & .shopName {
         display: grid;
         place-items: start;
+
+        &.headerHide {
+            @media only screen and (max-width: 600px) {
+                grid-column-start: 2;
+                grid-row-start: 1;
+            }
+
+            @media only screen and (max-width: 450px) {
+                grid-column-start: 1;
+                grid-row-start: 1;
+                padding-left: 55px;
+            }
+        }
+
+        &.footer {
+            @media only screen and (max-width: 450px) {
+                grid-column-start: 2;
+                grid-row-start: 1;
+            }
+        }
 
         & .name {
             place-self: end start;
@@ -83,11 +126,23 @@
     & .phone {
         font-weight: bold;
 
-        @media only screen and (max-width: 600px) {
-            grid-column-start: 1;
-            grid-column-end: 3;
-            grid-row-start: 2;
-            place-self: start;
+        &.headerHide {
+            @media only screen and (max-width: 600px) {
+                grid-column-start: 3;
+                grid-row-start: 1;
+            }
+            @media only screen and (max-width: 450px) {
+                place-self: start;
+                grid-column-start: 1;
+                grid-row-start: 2;
+            }
+        }
+
+        &.footer {
+            @media only screen and (max-width: 450px) {
+                grid-row-start: 3;
+                grid-column-start: 2;
+            }
         }
     }
 
@@ -108,25 +163,39 @@
             background-color: rgb(16, 23, 67);
             color: white;
             border: 1px solid white;
+
+            @media only screen and (max-width: 450px) {
+                grid-row-start: 4;
+                grid-column-start: 2;
+            }
         }
     }
 
     & .img {
-        @media only screen and (max-width: 600px) {
-            grid-column-start: 1;
-            grid-column-end: 3;
+        @media only screen and (max-width: 450px) {
             grid-row-start: 2;
+            grid-column-start: 1;
             place-self: end;
         }
     }
 
     & .price {
         font-weight: bold;
+
+        @media only screen and (max-width: 450px) {
+            grid-column-start: 2;
+            grid-row-start: 2;
+            place-self: start;
+        }
     }
 
     & .point {
         width: 5px;
         height: 5px;
+
+        @media only screen and (max-width: 600px) {
+            grid-row-start: 2;
+        }
     }
 
     & .hide {
@@ -135,6 +204,10 @@
 
     &.carouselStyle {
         background: transparent;
+
+        @media only screen and (max-width: 450px) {
+            padding: 15px;
+        }
     }
 
     &.footer {
